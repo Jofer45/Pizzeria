@@ -117,16 +117,16 @@
                                 <h1> Pizzeria Don Jose  </h1> <br><br>
          <div class="body-white">
             <div class="container form-container">
-                
-                <form action="../controlador/login.php" method="post" class="form-login">
+                <%@page import="Controlador.Login" %>
+                <form action="Login" method="post" class="form-login">
                     <div class="login_group">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" id="user" class="form_input" placeholder="Ingrese su Usuario">
+                        <input type="text" id="user" class="form_input" placeholder="Ingrese su Usuario" name="user">
                     </div>
         
                     <div class="login_group">
                         <i class="fa-sharp fa-solid fa-unlock"></i>
-                        <input type="password" id="password" class="form_input" placeholder="Ingrese su Password">
+                        <input type="password" id="password" class="form_input" placeholder="Ingrese su Password" name="pass">
                     </div>
         
                     <input type="submit" class="btn login_submit" id="enviar_login" value="Iniciar sesión">

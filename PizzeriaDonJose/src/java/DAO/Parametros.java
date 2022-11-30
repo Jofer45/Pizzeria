@@ -9,5 +9,8 @@ package DAO;
  * @author jorge
  */
 public interface Parametros {
-    
+    public String DRIVER="com.mysql.cj.jdbc.Driver";
+    public String RUTA="jdbc:mysql://localhost:3306/pizzeria_don_jose";
+    public String USUARIO="root";
+    public String PASS="admin";
 }
