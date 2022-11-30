@@ -38,8 +38,8 @@ public class Login extends HttpServlet {
         PrintWriter out = response.getWriter();
         String user=request.getParameter("user");
         String pass=request.getParameter("pass");
-        String mensaje=null;
-        Usuarios us=null;
+        String mensaje;
+        Usuarios us;
         try{
             ListaUsuarios.limpiarUsuarios();
             ActualizarListas al=new ActualizarListas();
@@ -47,9 +47,7 @@ public class Login extends HttpServlet {
             
             if (ListaUsuarios.verificarLogueo(user, pass)!=-1) {
                us=ListaUsuarios.recuperarUsuarios(user, pass);
-               mensaje="INGRESO REALIZADO EXITOSAMENTE";
                request.setAttribute("usuario", us);
-               request.setAttribute("mensaje", mensaje);
                request.getRequestDispatcher("/sistema.jsp").forward(request, response);
             }else {
                 mensaje="USUARIO O CONTRASEÑA INCORRECTOS";
